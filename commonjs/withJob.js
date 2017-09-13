@@ -170,8 +170,11 @@ function withJob(config) {
 
       this.resolveWork = function (props) {
         var workDefinition = void 0;
+        console.log('here in resolve work');
 
-        _this2.setState({ completed: false });
+        _this2.setState({ completed: false, error: null }, function () {
+          console.log('this.state');
+        });
 
         try {
           workDefinition = work(props);
