@@ -111,7 +111,7 @@ export default function withJob(config) {
         let workDefinition
         console.log('here in resolve work')
 
-        this.setState({ completed: false, error: null }).then(() => {
+        this.setState({ completed: false, error: null }, () => {
           console.log('this.state')
         })
 
